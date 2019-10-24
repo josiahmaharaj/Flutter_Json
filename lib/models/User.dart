@@ -1,6 +1,6 @@
 class Geo {
-  final double lat;
-  final double lng;
+  final String lat;
+  final String lng;
 
   Geo({this.lat, this.lng});
 
@@ -16,7 +16,8 @@ class Address {
   final String zipcode;
   final Geo geo;
 
-  Address({this.street, this.suite, this.city, this.zipcode, this.geo});
+  Address({this.street, this.suite, this.city, this.zipcode, this.geo
+  });
 
   factory Address.fromJson(Map<String, dynamic> json) {
     return Address(
@@ -24,7 +25,8 @@ class Address {
         suite: json['suite'],
         city: json['city'],
         zipcode: json['zipcode'],
-        geo: Geo.fromJson(json['geo']));
+        geo: Geo.fromJson(json['geo'])
+        );
   }
 }
 
@@ -51,25 +53,27 @@ class User {
   final String website;
   final Company company;
 
-  User(
-      {this.id,
-      this.name,
-      this.username,
-      this.email,
-      this.address,
-      this.phone,
-      this.website,
-      this.company});
+  User({
+    this.id,
+    this.name,
+    this.username,
+    this.email,
+    this.address,
+    this.phone,
+    this.website,
+    this.company
+  });
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
-        id: json['id'],
-        name: json['name'],
-        username: json['username'],
-        email: json['email'],
-        address: Address.fromJson(json['address']),
-        phone: json['phone'],
-        website: json['website'],
-        company: Company.fromJson(json['company']));
+      id: json['id'],
+      name: json['name'],
+      username: json['username'],
+      email: json['email'],
+      address: Address.fromJson(json['address']),
+      phone: json['phone'],
+      website: json['website'],
+      company: Company.fromJson(json['company'])
+    );
   }
 }

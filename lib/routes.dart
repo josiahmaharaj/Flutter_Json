@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home.dart';
 import 'screens/new-item.dart';
+import 'screens/user.dart';
 
 // class Routes{
 //   var routes = <String, WidgetBuilder>{
@@ -16,9 +17,9 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => Home());
-      case '/newItem':
+      case '/user':
         if (args is int) {
-          return MaterialPageRoute(builder: (_) => NewItem(userId: args,));
+          return MaterialPageRoute(builder: (_) => User(userId: args,));
         }
         return _errorRoute();
       default:

@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
         icon: Icon(Icons.add),
         label: Text('NEW ITEM'),
         onPressed: () {
-          Navigator.pushNamed(context, '/newItem', arguments: 1);
+          Navigator.pushNamed(context, '/user', arguments: 1);
         },
       ),
     );

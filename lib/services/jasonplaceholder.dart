@@ -19,6 +19,8 @@ Future<User> todoUser(int uid) async {
       "https://jsonplaceholder.typicode.com/users/" + uid.toString()));
   if (response.statusCode == 200) {
     return User.fromJson(json.decode(response.body));
+
+
   }
   throw Exception('Failed to load data');
 }
